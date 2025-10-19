@@ -440,30 +440,34 @@ function LogsModal({ eventId, tz, onClose }) {
                 >
                   {l.diff.previous.title !== l.diff.current.title && (
                     <div>
-                      <strong>Title:</strong> {l.diff.previous.title}
-                      {l.diff.current.title}
+                      {" "}
+                      <strong>Title:</strong> {l.diff.previous.title || "—"} →{" "}
+                      {l.diff.current.title || "—"}{" "}
                     </div>
-                  )}
+                  )}{" "}
                   {l.diff.previous.start !== l.diff.current.start && (
                     <div>
-                      <strong>Start:</strong> {l.diff.previous.start}
-                      {l.diff.current.start}
+                      {" "}
+                      <strong>Start:</strong> {l.diff.previous.start || "—"} →{" "}
+                      {l.diff.current.start || "—"}{" "}
                     </div>
-                  )}
+                  )}{" "}
                   {l.diff.previous.end !== l.diff.current.end && (
                     <div>
-                      <strong>End:</strong> {l.diff.previous.end}
-                      {l.diff.current.end}
+                      {" "}
+                      <strong>End:</strong> {l.diff.previous.end || "—"} →{" "}
+                      {l.diff.current.end || "—"}{" "}
                     </div>
-                  )}
+                  )}{" "}
                   {l.diff.previous.eventTimezone !==
                     l.diff.current.eventTimezone && (
                     <div>
-                      <strong>Timezone:</strong> {l.diff.previous.eventTimezone}
-                      {l.diff.current.eventTimezone}
+                      {" "}
+                      <strong>Timezone:</strong>{" "}
+                      {l.diff.previous.eventTimezone || "—"} →{" "}
+                      {l.diff.current.eventTimezone || "—"}{" "}
                     </div>
                   )}
-
                   {added.length > 0 && (
                     <div>
                       <strong>Added Profiles:</strong> {added.join(", ")}
